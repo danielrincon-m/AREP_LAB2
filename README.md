@@ -1,49 +1,63 @@
-# Project Title
+# Calculadora Estadística
 
-One Paragraph of project description goes here
+En este proyecto se presenta una calculadora estadística que cuenta con la capacidad de calcular la media y la
+desviación estándar de un set de datos que se leen de un archivo de texto.
 
-## Getting Started
+## Principales características
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+La calculadora estadística nos permite calcular la media de un set de datos ubicados en un archivo de texto, se puede
+utilizar de la siguiente manera:
 
-### Prerequisites
+### Ejecución
 
-What things you need to install the software and how to install them
+Cuando se ejecuta la calculadora esta viene pre-cargada con un set de datos, de los cuales calcula la media y la
+desviación estándar, el resultado luce de la siguiente forma:
 
-```
-Give examples
-```
+![Salida](img/salida.jpg)
 
-### Installing
+En donde el primer resultado es la media del set de datos y el segundo resultado es la desviación estándar.
 
-A step by step series of examples that tell you how to get a development env running
+### Cómo agregar un set de datos propio
 
-Say what the step will be
+Para agregar un set de datos propio, debe seguir los siguientes pasos:
 
-```
-Give the example
-```
+1. Crear un archivo de texto con los datos, uno por línea y ubicarlo en la carpeta resources que se encuentra en la ruta
+   src/main.
+2. Reemplazar la variable "fileName" ubicada en el archivo App.java, ubicado en la ruta src/main/java/edu/eci/arep por
+   el nombre de su archivo de datos.
+3. Ejecutar el programa y analizar la salida de datos.
 
-And repeat
+## Cómo obtener el proyecto
 
-```
-until finished
-```
+### Prerequisitos
 
-End with an example of getting some data out of the system or using it for a little demo
+Asegúrese de tener git instalado en su máquina, lo puede hacer desde la [página oficial][gitLink].
 
-## Running the tests
+### Descarga del proyecto
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Clone el proyecto utilizando el siguiente comando:
 
 ```
-Give an example
+git clone https://github.com/danielrincon-m/AREP_LAB1.git
 ```
 
+## Correr las pruebas unitarias
+
+### Prerequisitos
+
+Un IDE que soporte proyectos Java, o una instalación de Maven en su sistema, puebe obtenerlo desde
+la [página oficial.][mvnLink]
+
+### Ejecución de pruebas
+
+Las pruebas pueden ser ejecutadas desde la sección de pruebas de su IDE o si tiene maven puede navegar a la carpeta
+principal del proyecto y ejecutar el comando
+
+```
+mvn test
+```
+
+<!--
 ### And coding style tests
 
 Explain what these tests test and why
@@ -55,33 +69,33 @@ Give an example
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
+-->
 
-## Built With
+## Herramientas utilizadas
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [IntelliJ IDE](https://www.jetbrains.com/es-es/idea/download/) - IDE de desarrollo
+* [Maven](https://maven.apache.org/) - Manejo de Dependencias
+* [JUnit](https://junit.org/junit4/) - Pruebas unitarias
+* [GitHub](https://github.com/) - Repositorio de código
 
-## Contributing
+## Autor
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+**Daniel Felipe Rincón Muñoz:** *Planeación y desarrollo del proyecto* -
+[Perfil de GitHub](https://github.com/danielrincon-m)
 
-## Versioning
+## Licencia
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Este proyecto se encuentra licenciado bajo **GNU General Public License** - consulte el archivo [LICENSE.md](LICENSE.md)
+para más detalles.
 
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
+<!-- 
+## Acknowledgments 
 
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+-->
+
+[gitLink]: https://git-scm.com/downloads
+
+[mvnLink]: https://maven.apache.org/download.cgi

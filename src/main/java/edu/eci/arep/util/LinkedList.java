@@ -1,10 +1,20 @@
 package edu.eci.arep.util;
 
+/**
+ * Implementación de una lista enlazada sencilla, probada en la clase LinkedListTest
+ * @param <E> El tipo que se almacenará en la lista enlazada
+ *
+ * @author Daniel Rincón
+ */
 public class LinkedList<E> {
 
     private LinkedListNode<E> head;
     private int size;
 
+    /**
+     * Agrega un elemento al inicio de la lista
+     * @param e El elemento a agregar
+     */
     public void addFirst(E e) {
         LinkedListNode<E> newNode = new LinkedListNode<>(e);
         newNode.setNextNode(head);
@@ -12,6 +22,10 @@ public class LinkedList<E> {
         size++;
     }
 
+    /**
+     * Agreaga un elemento al final de la lista
+     * @param e El elemento a agregar
+     */
     public void addLast(E e) {
         LinkedListNode<E> newNode = new LinkedListNode<>(e);
         if (head == null) {
@@ -26,18 +40,17 @@ public class LinkedList<E> {
         size++;
     }
 
-    public E get(E e) {
-        LinkedListNode<E> actualNode = head;
-        for (int i = 0; i < size; i++) {
-            if (actualNode.equals(e)) {
-                return actualNode.getData();
-            }
-            actualNode = actualNode.getNextNode();
+    /**
+     * Obtiene el elemento ubicado en la posición dada de la lista
+     * @param index La posición de ls lista en la cual se desea buscar en la lista
+     * @return El elemento ubicado en la posición
+     * @throws IndexOutOfBoundsException Si la posición no existe en la lista
+     */
+    public E get(int index) throws IndexOutOfBoundsException {
+        if (index >= size) {
+            throw new IndexOutOfBoundsException();
         }
-        return actualNode.getData();
-    }
 
-    public E get(int index) {
         LinkedListNode<E> actualNode = head;
         for (int i = 0; i < index; i++) {
             actualNode = actualNode.getNextNode();
@@ -45,6 +58,11 @@ public class LinkedList<E> {
         return actualNode.getData();
     }
 
+    /**
+     * Remueve el elemento ubicado en el índice dado
+     * @param index La posición en la lista del elemento a remover
+     * @throws IndexOutOfBoundsException Cuando la posición no existe en la lista
+     */
     public void remove(int index) throws IndexOutOfBoundsException {
         LinkedListNode<E> nodeToRemove = head;
         LinkedListNode<E> prevNode = null;
@@ -68,6 +86,9 @@ public class LinkedList<E> {
         size--;
     }
 
+    /**
+     * @return La longitud de la lista enlazada
+     */
     public int getSize() {
         return size;
     }

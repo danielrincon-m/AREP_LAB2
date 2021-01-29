@@ -1,22 +1,24 @@
 package edu.eci.arep;
 
 import edu.eci.arep.util.LinkedList;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Unit test for simple App.
+ * Pruebas de la aplicación estadística
+ *
+ * @author Daniel Rincón
  */
 public class AppTest {
 
     private final Statistics statistics = new Statistics();
 
     /**
-     * Rigorous Test :-)
+     * Prueba del cálculo de la media de un set de datos
      */
     @Test
     public void meanTest() throws FileNotFoundException, URISyntaxException {
@@ -26,6 +28,9 @@ public class AppTest {
         assertEquals(60.32d, statistics.getMean(dataset2), 0.1d);
     }
 
+    /**
+     * Prueba del cálculo de la desviación estándar de un set de datos
+     */
     @Test
     public void standardDeviationTest() throws FileNotFoundException, URISyntaxException {
         LinkedList<Double> dataset1 = statistics.getDataFromFile("dataset1.txt");

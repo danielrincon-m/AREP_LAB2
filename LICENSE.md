@@ -1,4 +1,5 @@
-Laboratorio Maven & Git
+Calculadora Estadística 
+
 Copyright (C) 2021  Daniel Felipe Rincón Muñoz
 
 This program is free software: you can redistribute it and/or modify
