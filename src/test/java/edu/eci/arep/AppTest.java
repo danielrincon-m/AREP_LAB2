@@ -1,5 +1,6 @@
 package edu.eci.arep;
 
+import edu.eci.arep.statistics.Statistics;
 import edu.eci.arep.util.LinkedList;
 import org.junit.Test;
 
@@ -15,17 +16,15 @@ import static org.junit.Assert.assertEquals;
  */
 public class AppTest {
 
-    private final Statistics statistics = new Statistics();
-
     /**
      * Prueba del cálculo de la media de un set de datos
      */
     @Test
     public void meanTest() throws FileNotFoundException, URISyntaxException {
-        LinkedList<Double> dataset1 = statistics.getDataFromFile("dataset1.txt");
-        LinkedList<Double> dataset2 = statistics.getDataFromFile("dataset2.txt");
-        assertEquals(550.6d, statistics.getMean(dataset1), 0.1d);
-        assertEquals(60.32d, statistics.getMean(dataset2), 0.1d);
+        LinkedList<Double> dataset1 = Statistics.getDataFromFile("dataset1.txt");
+        LinkedList<Double> dataset2 = Statistics.getDataFromFile("dataset2.txt");
+        assertEquals(550.6d, Statistics.getMean(dataset1), 0.1d);
+        assertEquals(60.32d, Statistics.getMean(dataset2), 0.1d);
     }
 
     /**
@@ -33,9 +32,9 @@ public class AppTest {
      */
     @Test
     public void standardDeviationTest() throws FileNotFoundException, URISyntaxException {
-        LinkedList<Double> dataset1 = statistics.getDataFromFile("dataset1.txt");
-        LinkedList<Double> dataset2 = statistics.getDataFromFile("dataset2.txt");
-        assertEquals(572.03d, statistics.getStandardDeviation(dataset1), 0.1d);
-        assertEquals(62.26d, statistics.getStandardDeviation(dataset2), 0.1d);
+        LinkedList<Double> dataset1 = Statistics.getDataFromFile("dataset1.txt");
+        LinkedList<Double> dataset2 = Statistics.getDataFromFile("dataset2.txt");
+        assertEquals(572.03d, Statistics.getStandardDeviation(dataset1), 0.1d);
+        assertEquals(62.26d, Statistics.getStandardDeviation(dataset2), 0.1d);
     }
 }

@@ -1,9 +1,14 @@
 package edu.eci.arep;
 
-import edu.eci.arep.util.LinkedList;
+import edu.eci.arep.statistics.StatisticsHandler;
+import edu.eci.arep.util.Path;
+import spark.Request;
+import spark.Response;
 
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
+
+import static spark.Spark.*;
 
 /**
  * Aplicación con la que se puede calcular la media y la desviación estándar de un set de datos que se lee desde
@@ -14,13 +19,22 @@ import java.net.URISyntaxException;
  */
 public class App {
     public static void main(String[] args) throws FileNotFoundException, URISyntaxException {
+        port(getPort());
+        staticFiles.location("/public"); // Static files
 
-        String fileName = "dataset2.txt";
+        get(Path.Web.INDEX, StatisticsHandler.main);
+        post(Path.Web.INDEX, StatisticsHandler.computeNumbers);
 
-        Statistics statistics = new Statistics();
-        LinkedList<Double> data = statistics.getDataFromFile(fileName);
-        System.out.println(statistics.getMean(data));
-        System.out.println(statistics.getStandardDeviation(data));
+        get("*", (Request req, Response res) -> {
+            res.redirect(Path.Web.INDEX);
+            return null;
+        });
+    }
 
+    static int getPort() {
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 4567; //returns default port if heroku-port isn't set
     }
 }

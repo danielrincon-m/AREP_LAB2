@@ -14,6 +14,15 @@ public class LinkedList<E> implements Collection<E> {
     private LinkedListNode<E> head;
     private int size;
 
+    public LinkedList() {
+    }
+
+    public LinkedList (E[] array) {
+        for (E elt : array) {
+            addLast(elt);
+        }
+    }
+
     /**
      * Agrega un elemento al inicio de la lista
      * @param e El elemento a agregar

@@ -1,5 +1,6 @@
-package edu.eci.arep;
+package edu.eci.arep.statistics;
 
+import edu.eci.arep.App;
 import edu.eci.arep.util.LinkedList;
 
 import java.io.File;
@@ -20,7 +21,7 @@ public class Statistics {
      * @param data La linkedList con los datos que se van a procesar
      * @return La media de lo datos dados
      */
-    public Double getMean(LinkedList<Double> data) {
+    public static Double getMean(LinkedList<Double> data) {
         double sum = 0.0;
         int count = data.getSize();
         for (int i = 0; i < count; i++) {
@@ -34,7 +35,7 @@ public class Statistics {
      * @param data La linkedList con los datos que se van a procesar
      * @return La desviación estándar de lo datos dados
      */
-    public Double getStandardDeviation(LinkedList<Double> data) {
+    public static Double getStandardDeviation(LinkedList<Double> data) {
         double count = data.getSize();
         double mean = getMean(data);
         double sum = 0.0;
@@ -51,7 +52,7 @@ public class Statistics {
      * @throws URISyntaxException
      * @throws FileNotFoundException
      */
-    public LinkedList<Double> getDataFromFile(String fileName) throws URISyntaxException, FileNotFoundException {
+    public static LinkedList<Double> getDataFromFile(String fileName) throws URISyntaxException, FileNotFoundException {
         LinkedList<Double> data = new LinkedList<>();
         ClassLoader classLoader = App.class.getClassLoader();
         URI uri = classLoader.getResource(fileName).toURI();
