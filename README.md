@@ -2,7 +2,7 @@
 
 [![<ORG_NAME>](https://circleci.com/gh/danielrincon-m/AREP_LAB2.svg?style=svg)](https://statscalculator.herokuapp.com/calculator/)
 
-![Heroku](https://icon-icons.com/icons2/2108/PNG/32/heroku_icon_130912.png)
+[![Heroku](https://icon-icons.com/icons2/2108/PNG/32/heroku_icon_130912.png)](https://statscalculator.herokuapp.com/calculator/)
 
 ## Descripción 📈
 
