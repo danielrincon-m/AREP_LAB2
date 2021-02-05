@@ -1,6 +1,6 @@
 # Calculadora Estadística
 
-[![CircleCI](https://app.circleci.com/pipelines/github/danielrincon-m/AREP_LAB2)
+[![<ORG_NAME>](https://circleci.com/gh/danielrincon-m/AREP_LAB2.svg?style=svg)](https://statscalculator.herokuapp.com/calculator/)
 
 ## Descripción 📈
 
