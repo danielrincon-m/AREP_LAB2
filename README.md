@@ -1,6 +1,6 @@
 # Calculadora Estadística
 
-📈## Descripción
+## 📈Descripción
 
 La calculadora estadística nos permite calcular la media y la desviación estándar de un set de datos ingresados por el usuario.
 
@@ -16,7 +16,7 @@ Al abrir el sitio web nos encontraremos con una pantalla como esta:
 
 Esta pantalla contiene un campo de mensajes por parte de la aplicación, un campo para el ingreso de números y un botón de envío de datos. Debemos escribir los números de los cuales deseamos calcular la **Media** y la **Desviación Estándar** en el campo marcado como "Números", estos números irán separados por coma y su separador decimal es el punto. Una vez ingresados los números presionamos el botón *SUBMIT* y si el formato de los datos es correcto, en la parte inferior de la calculadora aparecerán los resultados retornados. Si el formato de los datos es incorrecto la calculadora lo detectará y enviará un mensaje de error al respecto.
 
-📥## Cómo obtener el proyecto
+## 📥Cómo obtener el proyecto
 
 ### Prerequisitos
 
@@ -30,7 +30,7 @@ Clone el proyecto utilizando el siguiente comando:
 git clone https://github.com/danielrincon-m/AREP_LAB1.git
 ```
 
-🧪## Correr las pruebas unitarias
+## 🧪Correr las pruebas unitarias
 
 ### Prerequisitos
 
@@ -46,7 +46,7 @@ principal del proyecto y ejecutar el comando
 mvn test
 ```
 
-🌎## Documentación del código fuente
+## 🌎Documentación del código fuente
 
 La documentación del proyecto puede ser encontrada en la carpeta [docs](/docs).
 
@@ -56,23 +56,23 @@ También puede ser generada con Maven, clonando el proyecto y ejecutando el sigu
 mvn javadoc:javadoc
 ```
 
-📄## Documento de diseño
+## 📄Documento de diseño
 
 El documento de diseño del programa puede ser encontrado [aquí](Lab2_AREP.pdf).
 
-🛠️## Herramientas utilizadas
+## 🛠️Herramientas utilizadas
 
 * [IntelliJ IDE](https://www.jetbrains.com/es-es/idea/download/) - IDE de desarrollo
 * [Maven](https://maven.apache.org/) - Manejo de Dependencias
 * [JUnit](https://junit.org/junit4/) - Pruebas unitarias
 * [GitHub](https://github.com/) - Repositorio de código
 
-🧔## Autor
+## 🧔Autor
 
 **Daniel Felipe Rincón Muñoz:** *Planeación y desarrollo del proyecto* -
 [Perfil de GitHub](https://github.com/danielrincon-m)
 
-🚀## Licencia
+## 🚀Licencia
 
 Este proyecto se encuentra licenciado bajo **GNU General Public License** - consulte el archivo [LICENSE.md](LICENSE.md)
 para más detalles.
