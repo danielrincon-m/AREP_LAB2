@@ -14,7 +14,13 @@ Al abrir el sitio web nos encontraremos con una pantalla como esta:
 
 ![Pantalla Principal](/img/PantallaPrincipal.jpg)
 
-Esta pantalla contiene un campo de mensajes por parte de la aplicación, un campo para el ingreso de números y un botón de envío de datos. Debemos escribir los números de los cuales deseamos calcular la **Media** y la **Desviación Estándar** en el campo marcado como "Números", estos números irán separados por coma y su separador decimal es el punto. Una vez ingresados los números presionamos el botón *SUBMIT* y si el formato de los datos es correcto, en la parte inferior de la calculadora aparecerán los resultados retornados. Si el formato de los datos es incorrecto la calculadora lo detectará y enviará un mensaje de error al respecto.
+✔️ Esta pantalla contiene un campo de mensajes por parte de la aplicación, un campo para el ingreso de números y un botón de envío de datos. 
+
+✔️ Debemos escribir los números de los cuales deseamos calcular la **Media** y la **Desviación Estándar** en el campo marcado como "Números", estos números irán separados por coma y su separador decimal es el punto. 
+
+✔️ Una vez ingresados los números presionamos el botón *SUBMIT* y si el formato de los datos es correcto, en la parte inferior de la calculadora aparecerán los resultados retornados. 
+
+✔️ Si el formato de los datos es incorrecto la calculadora lo detectará y enviará un mensaje de error al respecto.
 
 ## Cómo obtener el proyecto 📥
 
