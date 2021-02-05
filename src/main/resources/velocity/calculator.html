@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculadora Estadística</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- MATERIAL DESIGN ICONIC FONT -->
+    <link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+    <div class="inner">
+        <form method="POST" action="/calculator/">
+            <h3>Calculadora Estadística</h3>
+            #if($msg)
+            <p>$msg</p>
+            #else
+            <p>Escribe números separados por coma y presiona el
+                botón.</p>
+            #end
+
+            <label class="form-group">
+                <input name="numbers" type="text" class="form-control" required>
+                <span>Números</span>
+                <span class="border"></span>
+            </label>
+
+            <button>Submit
+                <i class="zmdi"></i>
+            </button>
+        </form>
+        #if($mean && $std)
+        <hr style="margin-top: 55px"/>
+        <p style="margin: 20px 0">Media: $mean; Desviación Estándar: $std</p>
+        <hr/>
+        #end
+    </div>
+</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

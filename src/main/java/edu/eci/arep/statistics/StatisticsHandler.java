@@ -21,17 +21,15 @@ public class StatisticsHandler {
         HashMap<String, Object> model = new HashMap<>();
         String numbers = req.queryParams("numbers");
 
-        if (numbers.equals("")) {
-            model.put("msg", "Escribe números separados por coma en la casilla y presiona el botón");
-        } else {
+        if (!numbers.equals("")) {
             try {
                 LinkedList<Double> data = new LinkedList<Double>(Arrays.stream(numbers.split(","))
                         .map(Double::valueOf)
                         .toArray(Double[]::new));
-                model.put("mean", Statistics.getMean(data));
-                model.put("std", Statistics.getStandardDeviation(data));
+                model.put("mean", String.format("%.2f", Statistics.getMean(data)));
+                model.put("std", String.format("%.2f", Statistics.getStandardDeviation(data)));
             } catch (NumberFormatException e) {
-                model.put("msg", "Errorsh");
+                model.put("msg", "Se ha presentado un error, asegúrese que todos los caracteres insertados son números.");
             }
         }
         return ViewUtil.render(req, model, Path.Template.INDEX);

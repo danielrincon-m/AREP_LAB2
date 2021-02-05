@@ -7,6 +7,6 @@ public class Path {
     }
 
     public static class Template {
-        public static final String INDEX = "/public/calculator.html";
+        public static final String INDEX = "/velocity/calculator.html";
     }
 }
