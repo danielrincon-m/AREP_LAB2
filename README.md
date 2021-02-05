@@ -1,5 +1,7 @@
 # Calculadora Estadística
 
+[![CircleCI](https://app.circleci.com/pipelines/github/danielrincon-m/AREP_LAB2)
+
 ## Descripción 📈
 
 La calculadora estadística nos permite calcular la media y la desviación estándar de un set de datos ingresados por el usuario.
