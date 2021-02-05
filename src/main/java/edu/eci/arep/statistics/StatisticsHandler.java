@@ -29,7 +29,7 @@ public class StatisticsHandler {
                 model.put("mean", String.format("%.2f", Statistics.getMean(data)));
                 model.put("std", String.format("%.2f", Statistics.getStandardDeviation(data)));
             } catch (NumberFormatException e) {
-                model.put("msg", "Se ha presentado un error, asegúrese que todos los caracteres insertados son números.");
+                model.put("msg", "Se ha presentado un error, asegúrate que todos los caracteres insertados son números.");
             }
         }
         return ViewUtil.render(req, model, Path.Template.INDEX);
